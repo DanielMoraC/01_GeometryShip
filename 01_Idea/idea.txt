@@ -1,0 +1,37 @@
+
+Juego de naves parecido al de brakeys con niveles al pasar de mapa.
+
+Habra un modo de oleadas en la que habra un highscore.
+
+Los enemigos te pueden soltar mejoras durante que solo duran un mapa.
+
+Las mejoras al pasar de mapa pueden ser pasivas o una activa.
+
+Algunos enemigos se dividiran en otros cuando los mates.
+
+Segun subas de mapa saldran enemigos mas duros y mas de estos.
+
+Entre mapa y mapa iras a una escena con una arbol de habilidades en el que escojeras lo que quieras.
+
+El mapa sera infinito e ira moviendose por lo que tendra que ser tileable.
+
+En el HUD habra un espacio para las vidas en ese mapa(3), un indicador en el que pondra la habilidad con un cooldown, 
+el mapa en el que estas, los enemigos que quedan para pasar de mapa y un menu de pausa para ir al menu principal o rendirse.
+
+El menu tendra el boton de start, el de opciones, el de quitar y tendra un selector de dificultad.
+
+El jugador se movera con las teclas awsd, apuntara y disparara con el raton y activara habilidades con el espacio.
+
+Alguno de los enemigos dispararan al jugador si este entra en el radio del enemigo.
+
+Habra un boss final el cual se ira transportando por la pantalla y spawneara algunas veces enemigos.
+
+Mejoras:
+
+Las mejoras pasivas seran mas daño, 1 mas de vida y mas velocidad.
+Una de las mejoras activas sera que cuando la tiras en un radio todos los enemigos mueren.
+Una de las mejoras de los enemigos sera disparar doble.
+Una de las mejoras de los enemigos sera una barrera durante unos segundos.
+Una de las mejoras de los enemigos sera un barrera que te salve de un golpe.
+
+
