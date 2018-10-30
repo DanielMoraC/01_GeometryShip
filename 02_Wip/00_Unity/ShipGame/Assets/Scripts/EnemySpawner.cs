@@ -102,7 +102,7 @@ public class EnemySpawner : MonoBehaviour {
         spawnPos += Random.insideUnitCircle * 2; //Opcion1
 
         int EnemiesIndex = Random.Range(0, Enemies.Length);
-        GameObject clone = Instantiate(Enemies[EnemiesIndex], spawnPos, Quaternion.identity);
+        GameObject clone = Instantiate(Enemies[EnemiesIndex], spawnPos, Quaternion.identity);        
         clone.SetActive(true);
         yield return new WaitForSeconds(1f);
         Spawning = true;
