@@ -16,6 +16,9 @@ public class Kill : MonoBehaviour {
     private int LifeDodecagon = 3;
 
     public int Damage = 1;
+    public int Killed;
+    public GameObject Icon1;
+    public GameObject Icon2;
 
     public int level;
 
@@ -31,6 +34,16 @@ public class Kill : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Spawn skils
+        if(Killed == 4){
+            GameObject clone = Instantiate(Icon1, gameObject.transform.position, Quaternion.identity);        
+            clone.SetActive(true);
+        }
+        if(Killed == 8){
+            GameObject clone = Instantiate(Icon2, gameObject.transform.position, Quaternion.identity);        
+            clone.SetActive(true);
+        }
+        //When enemies die
         if (LifeSquare <= 0)
         {
             EnemySpawner.MaxEnemies--;

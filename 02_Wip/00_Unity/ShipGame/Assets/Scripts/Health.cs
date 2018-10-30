@@ -15,6 +15,8 @@ public class Health : MonoBehaviour {
     public GameObject heart0;
     public GameObject heart01;
 
+    static public bool Damaged = true;
+
     public int Lifes = 0;
 
     Renderer rend;
@@ -73,6 +75,8 @@ public class Health : MonoBehaviour {
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(Damaged){
+        
         #region Square
         if (collision.gameObject.tag == "Square")
         {
@@ -277,7 +281,7 @@ public class Health : MonoBehaviour {
             }
         }
         #endregion Dodecagon
-
+        }
     }
 
     public virtual void Die()

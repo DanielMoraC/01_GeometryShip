@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\CursorImage.cs" />
      <Compile Include="Assets\Scripts\DefineVariables.cs" />
+     <Compile Include="Assets\Scripts\EnemySkills.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\Kill.cs" />

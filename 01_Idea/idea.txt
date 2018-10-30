@@ -31,7 +31,6 @@ Mejoras:
 //Las mejoras pasivas seran mas daño, 1 mas de vida y mas velocidad.
 Una de las mejoras activas sera que cuando la tiras en un radio todos los enemigos mueren.
 Una de las mejoras de los enemigos sera disparar doble.
-Una de las mejoras de los enemigos sera una barrera durante unos segundos.
-Una de las mejoras de los enemigos sera un barrera que te salve de un golpe.
+//Una de las mejoras de los enemigos sera una barrera durante unos segundos.
 
 
