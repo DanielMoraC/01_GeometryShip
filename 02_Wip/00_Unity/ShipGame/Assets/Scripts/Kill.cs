@@ -16,10 +16,10 @@ public class Kill : MonoBehaviour {
     private int LifeDodecagon = 3;
 
     public int Damage = 1;
-    public int Killed;
     public GameObject Icon1;
     public GameObject Icon2;
-
+    
+    Vector2 mousePos = Vector2.zero;
     public int level;
 
     // Use this for initialization
@@ -34,38 +34,48 @@ public class Kill : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Mouse Position for spawn
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 lookDir = mousePos;
         //Spawn skils
-        if(Killed == 4){
-            GameObject clone = Instantiate(Icon1, gameObject.transform.position, Quaternion.identity);        
+        if(SkillsCount.Killeds == 4 && SkillsCount.SkillsSpawned == 0){
+            SkillsCount.SkillsSpawned++;              
+            GameObject clone = Instantiate(Icon1, lookDir, Quaternion.identity);      
             clone.SetActive(true);
         }
-        if(Killed == 8){
-            GameObject clone = Instantiate(Icon2, gameObject.transform.position, Quaternion.identity);        
+        if(SkillsCount.Killeds == 8 && SkillsCount.SkillsSpawned == 1){
+            SkillsCount.SkillsSpawned++;
+            GameObject clone = Instantiate(Icon2, lookDir, Quaternion.identity);        
             clone.SetActive(true);
         }
         //When enemies die
         if (LifeSquare <= 0)
         {
+            SkillsCount.Killeds++;
             EnemySpawner.MaxEnemies--;
             Destroy(this.gameObject);
         }
         if (LifePentagon <= 0)
         {
+            SkillsCount.Killeds++;
             EnemySpawner.MaxEnemies--;
             Destroy(this.gameObject);
         }
         if (LifeOctagon <= 0)
         {
+            SkillsCount.Killeds++;
             EnemySpawner.MaxEnemies--;
             Destroy(this.gameObject);
         }
         if (LifeHexagon <= 0)
         {
+            SkillsCount.Killeds++;
             EnemySpawner.MaxEnemies--;
             Destroy(this.gameObject);
         }
         if (LifeDodecagon <= 0)
         {
+            SkillsCount.Killeds++;
             EnemySpawner.MaxEnemies--;
             Destroy(this.gameObject);
         }

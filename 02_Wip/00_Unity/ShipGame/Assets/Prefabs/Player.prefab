@@ -266,6 +266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 0}
+  bulletPrefab2: {fileID: 0}
+  bulletPrefab3: {fileID: 0}
   Launcher: {fileID: 1181054225659688}
   Launcher2: {fileID: 1304592384265524}
   Launcher3: {fileID: 1398770374490082}

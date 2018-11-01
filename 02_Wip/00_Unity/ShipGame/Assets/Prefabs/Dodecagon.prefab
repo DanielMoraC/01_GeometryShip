@@ -22,15 +22,15 @@ GameObject:
   - component: {fileID: 212842248078511858}
   - component: {fileID: 50798235154230646}
   - component: {fileID: 61970787233004984}
-  - component: {fileID: 114027569957629450}
   - component: {fileID: 114789936670833774}
+  - component: {fileID: 114027569957629450}
   m_Layer: 0
   m_Name: Dodecagon
   m_TagString: Dodecagon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4552062095497696
 Transform:
   m_ObjectHideFlags: 1
@@ -106,6 +106,8 @@ MonoBehaviour:
   EnemyOctagon: 0
   EnemyDodecagon: 1
   Damage: 1
+  Icon1: {fileID: 0}
+  Icon2: {fileID: 0}
   level: 0
 --- !u!114 &114789936670833774
 MonoBehaviour:

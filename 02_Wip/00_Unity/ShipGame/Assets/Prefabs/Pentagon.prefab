@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1969332912091298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.98, y: 2.16, z: 0.8}
+  m_LocalPosition: {x: -0.83, y: -0.15, z: 0.8}
   m_LocalScale: {x: 0.012674585, y: 0.012674586, z: 0.012674586}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,6 +102,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemySquare: 0
   EnemyPentagon: 1
+  EnemyHexagon: 0
+  EnemyOctagon: 0
+  EnemyDodecagon: 0
+  Damage: 1
+  Icon1: {fileID: 0}
+  Icon2: {fileID: 0}
+  level: 0
 --- !u!114 &114210415080258516
 MonoBehaviour:
   m_ObjectHideFlags: 1

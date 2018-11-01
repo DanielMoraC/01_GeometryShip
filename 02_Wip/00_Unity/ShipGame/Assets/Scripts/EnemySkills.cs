@@ -7,9 +7,9 @@ public class EnemySkills : MonoBehaviour {
 	public bool Skill1;
 	public bool Skill2;
 	public GameObject PlayerIcon1;
-	public GameObject PlayerIcon2;
+	//public GameObject PlayerIcon2;
 	public GameObject IconSprite1;
-	public GameObject IconSprite2;
+	public GameObject IconSprite2;	
 
 	// Use this for initialization
 	void Start () {
@@ -20,25 +20,7 @@ public class EnemySkills : MonoBehaviour {
 	void Update () {
 		
 	}
-/* 
-	private void OnCollisionEnter2D(Collision2D collision){
-		if (Skill1)
-        {
-            if (collision.gameObject.tag == "Player")
-            {
-				StartCoroutine("NoDamage");
-				gameObject.SetActive(false);
-            }
-        }
-		if (Skill2)
-        {
-            if (collision.gameObject.tag == "Player")
-            {
-				StartCoroutine("Double");
-                gameObject.SetActive(false);		
-            }
-        }
-	}*/
+
 	private void OnTriggerEnter2D(Collider2D other) {
 		if (Skill1)
         {
@@ -67,11 +49,10 @@ public class EnemySkills : MonoBehaviour {
 		Destroy(this.gameObject);
 	}
 	public IEnumerator Double(){
-		PlayerIcon2.SetActive(true);
+		//PlayerIcon2.SetActive(true);
 		Weapon.DoubleShoot = true;
-		yield return new WaitForSeconds(3f);
-		Weapon.DoubleShoot = false;
-		PlayerIcon2.SetActive(false);
+		yield return new WaitForSeconds(0.2f);
+		//PlayerIcon2.SetActive(false);
 		Destroy(this.gameObject);
 	}
 }
