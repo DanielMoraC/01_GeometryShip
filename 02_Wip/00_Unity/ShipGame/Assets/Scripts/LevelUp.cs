@@ -7,6 +7,9 @@ public class LevelUp : MonoBehaviour {
     public int S1 = 0;
     public int S2 = 0;
     public int S3 = 0;
+    public int Active1 = 0;
+    public int Active2 = 0;
+    public int Active3 = 0;
 
     public int Lvl = 0;
 
@@ -15,6 +18,9 @@ public class LevelUp : MonoBehaviour {
 		S1 = PlayerPrefs.GetInt("Skill1");
         S2 = PlayerPrefs.GetInt("Skill2");
         S3 = PlayerPrefs.GetInt("Skill3");
+        Active1 = PlayerPrefs.GetInt("Skill4");
+        Active2 = PlayerPrefs.GetInt("Skill5");
+        Active3 = PlayerPrefs.GetInt("Skill6");
         Lvl = PlayerPrefs.GetInt("Lvl");
     }
 	
@@ -120,5 +126,25 @@ public class LevelUp : MonoBehaviour {
                 PlayerPrefs.SetInt("Lvl", 0);
             }
         }
+    }
+
+    //Granade
+
+    public void Skill4()
+    {/* 
+        if (Lvl == 1)
+        {
+            if (Active1 == 0)
+            {
+                Menu.Next = 1;
+                PlayerPrefs.SetInt("Skill4", 1);
+                PlayerPrefs.SetInt("Life1", 1);
+                PlayerPrefs.SetInt("PlayerLife", 1);
+                PlayerPrefs.SetInt("Lvl", 0);
+            }
+        }*/
+        Menu.Next = 1;
+        PlayerPrefs.SetInt("ActiveNumber", 1);
+        PlayerPrefs.SetInt("Lvl", 0);
     }
 }
