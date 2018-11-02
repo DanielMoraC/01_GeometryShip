@@ -24,6 +24,9 @@ public class Kill : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        //Define the damage
+
         level = PlayerPrefs.GetInt("Damage1");
 
         if (level == 1)
@@ -37,7 +40,7 @@ public class Kill : MonoBehaviour {
         //Mouse Position for spawn
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = mousePos;
-        //Spawn skils
+        //Spawn skills
         if(SkillsCount.Killeds == 4 && SkillsCount.SkillsSpawned == 0){
             SkillsCount.SkillsSpawned++;              
             GameObject clone = Instantiate(Icon1, lookDir, Quaternion.identity);      
@@ -80,6 +83,8 @@ public class Kill : MonoBehaviour {
             Destroy(this.gameObject);
         }
     }
+
+    //When the bullet hit an enemy it lose health and destroy the bullet
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

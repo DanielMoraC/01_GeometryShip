@@ -23,6 +23,8 @@ public class LevelUp : MonoBehaviour {
 		
 	}
 
+    //Player speed
+
     public void Skill1()
     {
         if (Lvl == 1)
@@ -53,6 +55,9 @@ public class LevelUp : MonoBehaviour {
             }
         }
     }
+
+    //Player Damage
+
     public void Skill2()
     {
         if (Lvl == 1)
@@ -83,6 +88,8 @@ public class LevelUp : MonoBehaviour {
             }
         }
     }
+
+    //Player life
 
     public void Skill3()
     {

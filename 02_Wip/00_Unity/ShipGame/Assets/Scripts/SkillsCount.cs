@@ -7,7 +7,7 @@ public class SkillsCount : MonoBehaviour {
 	static public int Killeds = 0;	
 	static public int SkillsSpawned = 0;
 
-	// Use this for initialization
+	//Define the skills
 	void Start () {
 		Killeds = 0;
 		SkillsSpawned = 0;

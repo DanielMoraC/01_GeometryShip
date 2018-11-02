@@ -21,6 +21,7 @@ public class EnemySkills : MonoBehaviour {
 		
 	}
 
+	//When the player hits the sprite of the skill do what it should
 	private void OnTriggerEnter2D(Collider2D other) {
 		if (Skill1)
         {

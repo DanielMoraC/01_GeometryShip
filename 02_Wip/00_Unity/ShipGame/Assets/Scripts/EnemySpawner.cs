@@ -18,6 +18,9 @@ public class EnemySpawner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        //Define the map and the max enemies
+
         map = PlayerPrefs.GetInt("CurrentMap");
 
         if (map == 0)
@@ -38,9 +41,11 @@ public class EnemySpawner : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () {   
        
         EnemiesLeft.text = MaxEnemies.ToString();
+
+        //Spawn the enemies
 
         if (map == 0)
         {
@@ -90,6 +95,8 @@ public class EnemySpawner : MonoBehaviour {
             }
         }
     }
+
+    //Set the position for the spawn
 
     IEnumerator Spawn1()
     {

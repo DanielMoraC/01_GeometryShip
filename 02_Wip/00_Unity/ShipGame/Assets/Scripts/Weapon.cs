@@ -20,6 +20,8 @@ public class Weapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
+        //Disprar solo una bala
+
         if(!DoubleShoot){
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
@@ -27,6 +29,9 @@ public class Weapon : MonoBehaviour {
                 clone1.SetActive(true);
             }
         }
+
+        //Disparar dos balas
+
         if(DoubleShoot){
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {

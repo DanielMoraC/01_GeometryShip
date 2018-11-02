@@ -27,6 +27,8 @@ public class Health : MonoBehaviour {
     void Start () {
         rend = GetComponent<Renderer>();
 
+        //Define the amount of life
+
         level = PlayerPrefs.GetInt("Life1");
 
         if (level == 1)
@@ -65,7 +67,7 @@ public class Health : MonoBehaviour {
         }*/
     }
 	
-	// Update is called once per frame
+	//Die
 	void Update () {
         if (health == 0)
         {
@@ -73,6 +75,8 @@ public class Health : MonoBehaviour {
         }
 	}
     
+    //Take damage from enemies
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(Damaged){
@@ -287,8 +291,9 @@ public class Health : MonoBehaviour {
     public virtual void Die()
     {
         SceneManager.LoadScene("Menu");
-        //Debug.Log("Muerto");
     }
+
+    //deactivate the hearts when the player get damages
 
     public virtual void HitDamage()
     {
@@ -308,6 +313,8 @@ public class Health : MonoBehaviour {
             heart2.SetActive(false);
         }
     }
+
+    //When you get hit the player sprite is red
 
     IEnumerator Hit()
     {

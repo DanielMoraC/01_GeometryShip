@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DefineVariables : MonoBehaviour {
 
-	// Use this for initialization
+	//Set the damage of the player at 1 on the first map
 	void Start () {
         PlayerPrefs.SetInt("PlayerDamage", 1);
     }

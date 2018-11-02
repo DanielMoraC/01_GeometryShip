@@ -13,7 +13,7 @@ public class ToPlayer : MonoBehaviour {
         
     }
 	
-	// Update is called once per frame
+	//Que los enemigos vayan al jugador
 	void Update () {
         Speed = 1.7f * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, Speed);
