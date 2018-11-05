@@ -9,30 +9,32 @@ Las mejoras al pasar de mapa pueden ser pasivas o una activa.
 
 Algunos enemigos se dividiran en otros cuando los mates.
 
-//Segun subas de mapa saldran enemigos mas duros y mas de estos.
+Segun subas de mapa saldran enemigos mas duros y mas de estos.
 
-//Entre mapa y mapa iras a una escena con una arbol de habilidades en el que escojeras lo que quieras.
+Entre mapa y mapa iras a una escena con una arbol de habilidades en el que escojeras lo que quieras.
 
-//El mapa sera infinito e ira moviendose por lo que tendra que ser tileable.
+El mapa sera infinito e ira moviendose por lo que tendra que ser tileable.
 
-//En el HUD habra un espacio para las vidas en ese mapa(3), un indicador en el que pondra la habilidad con un cooldown, 
-//el mapa en el que estas, los enemigos que quedan para pasar de mapa y un menu de pausa para ir al menu principal o rendirse.
+En el HUD habra un espacio para las vidas en ese mapa(3), un indicador en el que pondra la habilidad con un cooldown, 
+el mapa en el que estas, los enemigos que quedan para pasar de mapa y un menu de pausa para ir al menu principal o rendirse.
 
-//El menu tendra el boton de start, el de opciones y el de quitar.
+El menu tendra el boton de start, el de opciones y el de quitar.
 
-//El jugador se movera con las teclas awsd, apuntara y disparara con el raton y activara habilidades con el espacio.
+El jugador se movera con las teclas awsd, apuntara y disparara con el raton y activara habilidades con el espacio.
 
 Alguno de los enemigos dispararan al jugador si este entra en el radio del enemigo.
 
 Habra un boss final el cual se ira transportando por la pantalla y spawneara algunas veces enemigos.
 
+Menu que se mueva tipo Isaac
+
 Mejoras:
 
-//Las mejoras pasivas seran mas daño, 1 mas de vida y mas velocidad.
+Las mejoras pasivas seran mas daño, 1 mas de vida y mas velocidad.
 Una de las mejoras activas sera que cuando la tiras en un radio todos los enemigos mueren.
-//Una de las mejoras activas sera que cuando la tiras pones una bomba que explota y mata a todos los enemigos en un radio.
+Una de las mejoras activas sera que cuando la tiras pones una bomba que explota y mata a todos los enemigos en un radio.
 Una de las mejoras activas sera que cuando la tiras lanzas un rayo en forma de cono enorme.
-//Una de las mejoras de los enemigos sera disparar doble.
-//Una de las mejoras de los enemigos sera una barrera durante unos segundos.
+Una de las mejoras de los enemigos sera disparar doble.
+Una de las mejoras de los enemigos sera una barrera durante unos segundos.
 
 

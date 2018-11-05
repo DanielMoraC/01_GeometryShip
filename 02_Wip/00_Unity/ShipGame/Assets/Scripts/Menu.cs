@@ -4,18 +4,31 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
-
+    
+    public GameObject Buttons;
+    Animator m_Animator;   
     public int map = 0;
     static public int Next = 0;
     // Use this for initialization
-    void Start () {
-        //map = PlayerPrefs.GetInt("CurrentMap");
-        
+    void Start () {       
+        m_Animator = Buttons.GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
 	void Update () {
         map = PlayerPrefs.GetInt("CurrentMap");
+    }
+    public void ToControls(){
+        m_Animator.SetBool("Controls", true);
+    }
+    public void BackToMenu(){
+        m_Animator.SetBool("Controls", false);
+    }
+    public void ToPlay(){
+        m_Animator.SetBool("Play", true);
+    }
+    public void BackToMenu2(){
+        m_Animator.SetBool("Play", false);
     }
     public void Remove()
     {
