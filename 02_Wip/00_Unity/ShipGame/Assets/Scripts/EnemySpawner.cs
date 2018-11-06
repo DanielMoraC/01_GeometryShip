@@ -57,6 +57,7 @@ public class EnemySpawner : MonoBehaviour {
             {
                 PlayerPrefs.SetInt("Lvl", 1);
                 PlayerPrefs.SetInt("CurrentMap", 1);
+                PlayerPrefs.SetInt("ActiveNumber", 0);
                 Destroy(GameObject.FindWithTag("Square"));
                 Destroy(GameObject.FindWithTag("Pentagon"));
                 SceneManager.LoadScene("LevelUp");

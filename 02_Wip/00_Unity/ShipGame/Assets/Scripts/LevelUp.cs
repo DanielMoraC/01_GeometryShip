@@ -131,20 +131,27 @@ public class LevelUp : MonoBehaviour {
     //Granade
 
     public void Skill4()
-    {/* 
-        if (Lvl == 1)
-        {
-            if (Active1 == 0)
-            {
-                Menu.Next = 1;
-                PlayerPrefs.SetInt("Skill4", 1);
-                PlayerPrefs.SetInt("Life1", 1);
-                PlayerPrefs.SetInt("PlayerLife", 1);
-                PlayerPrefs.SetInt("Lvl", 0);
-            }
-        }*/
+    {
         Menu.Next = 1;
         PlayerPrefs.SetInt("ActiveNumber", 1);
+        PlayerPrefs.SetInt("Lvl", 0);
+    }
+
+    //Energy Field
+
+    public void Skill5()
+    {
+        Menu.Next = 1;
+        PlayerPrefs.SetInt("ActiveNumber", 2);
+        PlayerPrefs.SetInt("Lvl", 0);
+    }
+
+    //Blast
+
+    public void Skill6()
+    {
+        Menu.Next = 1;
+        PlayerPrefs.SetInt("ActiveNumber", 3);
         PlayerPrefs.SetInt("Lvl", 0);
     }
 }

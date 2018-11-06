@@ -23,22 +23,27 @@ public class Granade : MonoBehaviour {
 		if(Started){		
 		if (other.gameObject.tag == "Square")
         {
+            EnemySpawner.MaxEnemies--;
             Destroy(other.gameObject);
         }
 		if (other.gameObject.tag == "Pentagon")
         {
             Destroy(other.gameObject);
+            EnemySpawner.MaxEnemies--;
         }
 		if (other.gameObject.tag == "Hexagon")
         {
+            EnemySpawner.MaxEnemies--;
             Destroy(other.gameObject);
         }
 		if (other.gameObject.tag == "Octagon")
         {
             Destroy(other.gameObject);
+            EnemySpawner.MaxEnemies--;
         }
 		if (other.gameObject.tag == "Dodecagon")
         {
+            EnemySpawner.MaxEnemies--;
             Destroy(other.gameObject);
         }
 		}
