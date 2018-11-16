@@ -68,6 +68,11 @@ public class Menu : MonoBehaviour {
             SceneManager.LoadScene("Map3");
             //Time.timeScale = 0;
         }
+        if (map == 3 && Next == 1)
+        {
+            SceneManager.LoadScene("Map4");
+            //Time.timeScale = 0;
+        }
 
     }
 
@@ -86,6 +91,11 @@ public class Menu : MonoBehaviour {
         if (map == 2)
         {
             SceneManager.LoadScene("Map3");
+            //Time.timeScale = 0;
+        }
+        if (map == 3)
+        {
+            SceneManager.LoadScene("Map4");
             //Time.timeScale = 0;
         }
     }

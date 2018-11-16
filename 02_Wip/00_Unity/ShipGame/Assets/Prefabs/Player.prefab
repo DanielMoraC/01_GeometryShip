@@ -346,8 +346,10 @@ MonoBehaviour:
   heart3: {fileID: 0}
   heart4: {fileID: 0}
   heart5: {fileID: 0}
+  heart6: {fileID: 0}
   heart0: {fileID: 0}
   heart01: {fileID: 0}
+  heart02: {fileID: 0}
   Lifes: 0
   level: 0
 --- !u!114 &114862240800082548

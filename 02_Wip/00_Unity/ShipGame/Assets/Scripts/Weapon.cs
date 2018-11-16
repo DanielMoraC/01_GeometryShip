@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour {
     static public bool DoubleShoot = false;
     // Use this for initialization
     void Start () {
-		
+		DoubleShoot = false;
 	}
 	
 	// Update is called once per frame

@@ -59,6 +59,22 @@ public class LevelUp : MonoBehaviour {
                 PlayerPrefs.SetFloat("PlayerSpeed", 4f);
                 PlayerPrefs.SetInt("Lvl", 0);
             }
+            if (S1 == 3)
+            {
+                Menu.Next = 1;
+                PlayerPrefs.SetInt("Skill1", 4);
+                PlayerPrefs.SetInt("Leveled1", 1);
+                PlayerPrefs.SetFloat("PlayerSpeed", 5f);
+                PlayerPrefs.SetInt("Lvl", 0);
+            }
+            if (S1 == 4)
+            {
+                Menu.Next = 1;
+                PlayerPrefs.SetInt("Skill1", 5);
+                PlayerPrefs.SetInt("Leveled1", 1);
+                PlayerPrefs.SetFloat("PlayerSpeed", 6f);
+                PlayerPrefs.SetInt("Lvl", 0);
+            }
         }
     }
 
@@ -92,6 +108,22 @@ public class LevelUp : MonoBehaviour {
                 PlayerPrefs.SetInt("PlayerDamage", 4);
                 PlayerPrefs.SetInt("Lvl", 0);
             }
+            if (S2 == 3)
+            {
+                Menu.Next = 1;
+                PlayerPrefs.SetInt("Skill2", 4);
+                PlayerPrefs.SetInt("Damage1", 1);
+                PlayerPrefs.SetInt("PlayerDamage", 5);
+                PlayerPrefs.SetInt("Lvl", 0);
+            }
+            if (S2 == 4)
+            {
+                Menu.Next = 1;
+                PlayerPrefs.SetInt("Skill2", 5);
+                PlayerPrefs.SetInt("Damage1", 1);
+                PlayerPrefs.SetInt("PlayerDamage", 6);
+                PlayerPrefs.SetInt("Lvl", 0);
+            }
         }
     }
 
@@ -123,6 +155,22 @@ public class LevelUp : MonoBehaviour {
                 PlayerPrefs.SetInt("Skill3", 3);
                 PlayerPrefs.SetInt("Life1", 1);
                 PlayerPrefs.SetInt("PlayerLife", 3);
+                PlayerPrefs.SetInt("Lvl", 0);
+            }
+            if (S3 == 3)
+            {
+                Menu.Next = 1;
+                PlayerPrefs.SetInt("Skill3", 4);
+                PlayerPrefs.SetInt("Life1", 1);
+                PlayerPrefs.SetInt("PlayerLife", 4);
+                PlayerPrefs.SetInt("Lvl", 0);
+            }
+            if (S3 == 4)
+            {
+                Menu.Next = 1;
+                PlayerPrefs.SetInt("Skill3", 5);
+                PlayerPrefs.SetInt("Life1", 1);
+                PlayerPrefs.SetInt("PlayerLife", 5);
                 PlayerPrefs.SetInt("Lvl", 0);
             }
         }

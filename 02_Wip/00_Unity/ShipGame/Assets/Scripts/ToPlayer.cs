@@ -5,7 +5,6 @@ using UnityEngine;
 public class ToPlayer : MonoBehaviour {
 
     public GameObject Player;
-
     private float Speed;
 
 	// Use this for initialization
@@ -15,7 +14,13 @@ public class ToPlayer : MonoBehaviour {
 	
 	//Que los enemigos vayan al jugador
 	void Update () {
-        Speed = 1.7f * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, Speed);
+		Vector3 dir = Player.transform.position - transform.position;
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+		transform.rotation = Quaternion.AngleAxis(angle -90, Vector3.forward);
+
+			Speed = 1.7f * Time.deltaTime;
+			transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, Speed);
+		
+		
     }
 }

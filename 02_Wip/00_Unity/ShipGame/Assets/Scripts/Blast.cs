@@ -47,5 +47,15 @@ public class Blast : MonoBehaviour {
             EnemySpawner.MaxEnemies--;
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Double")
+        {
+            EnemySpawner.MaxEnemies--;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Shot")
+        {
+            EnemySpawner.MaxEnemies--;
+            Destroy(collision.gameObject);
+        }
     }
 }

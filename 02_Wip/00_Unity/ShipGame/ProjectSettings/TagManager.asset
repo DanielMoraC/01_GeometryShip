@@ -12,6 +12,9 @@ TagManager:
   - Octagon
   - Hexagon
   - Dodecagon
+  - Double
+  - Shot
+  - ShotBullet
   layers:
   - Default
   - TransparentFX

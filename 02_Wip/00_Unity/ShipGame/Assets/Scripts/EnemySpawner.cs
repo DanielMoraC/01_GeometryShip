@@ -33,7 +33,7 @@ public class EnemySpawner : MonoBehaviour {
             MaxEnemies = 15;
         }
 
-        if (map == 2)
+        if (map >= 2)
         {
             MaxEnemies = 20;
         }
@@ -90,9 +90,26 @@ public class EnemySpawner : MonoBehaviour {
                 PlayerPrefs.SetInt("Lvl", 1);
                 PlayerPrefs.SetInt("CurrentMap", 3);
                 Destroy(GameObject.FindWithTag("Octagon"));
-                Destroy(GameObject.FindWithTag("Dodecagon"));
+                Destroy(GameObject.FindWithTag("Dodecagon"));               
+                SceneManager.LoadScene("LevelUp");
+            }
+        }
+
+        if (map == 3)
+        {
+            if (MaxEnemies > 0 && Spawning)
+            {
+                StartCoroutine("Spawn3");
+            }
+            if (MaxEnemies == 0)
+            {
+                PlayerPrefs.SetInt("Lvl", 1);
+                PlayerPrefs.SetInt("CurrentMap", 4);
+				Destroy(GameObject.FindWithTag("Double"));
+				Destroy(GameObject.FindWithTag("Square"));
+                Destroy(GameObject.FindWithTag("Shot"));        
                 //SceneManager.LoadScene("LevelUp");
-                SceneManager.LoadScene("Win");
+                SceneManager.LoadScene("Win");                
             }
         }
     }

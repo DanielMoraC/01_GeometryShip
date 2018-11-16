@@ -12,8 +12,10 @@ public class Health : MonoBehaviour {
     public GameObject heart3;
     public GameObject heart4;
     public GameObject heart5;
+    public GameObject heart6;
     public GameObject heart0;
     public GameObject heart01;
+    public GameObject heart02;
 
     static public bool Damaged = true;
 
@@ -48,6 +50,14 @@ public class Health : MonoBehaviour {
         {
             health = 6;
         }
+        if (Lifes == 4)
+        {
+            health = 7;
+        }
+        if (Lifes == 5)
+        {
+            health = 8;
+        }
 
         if (health == 4)
         {
@@ -60,11 +70,13 @@ public class Health : MonoBehaviour {
             heart5.SetActive(true);
             heart01.SetActive(true);
         }
-        /* if (health == 4)
+        if (health == 6)
         {
             heart4.SetActive(true);
-            heart0.SetActive(true);
-        }*/
+            heart5.SetActive(true);
+            heart6.SetActive(true);
+            heart02.SetActive(true);
+        }
     }
 	
 	//Die
@@ -84,7 +96,14 @@ public class Health : MonoBehaviour {
         #region Square
         if (collision.gameObject.tag == "Square")
         {
-            if (health == 5)
+            if (health == 6)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                HitDamage();
+                StartCoroutine("Hit");
+            }
+            else if (health == 5)
             {
                 Destroy(collision.gameObject);
                 health--;
@@ -125,7 +144,14 @@ public class Health : MonoBehaviour {
         #region Pentagon
         if (collision.gameObject.tag == "Pentagon")
         {
-            if (health == 5)
+            if (health == 6)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                HitDamage();
+                StartCoroutine("Hit");
+            }
+            else if (health == 5)
             {
                 Destroy(collision.gameObject);
                 health--;
@@ -166,7 +192,14 @@ public class Health : MonoBehaviour {
         #region Hexagon
         if (collision.gameObject.tag == "Hexagon")
         {
-            if (health == 5)
+            if (health == 6)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                HitDamage();
+                StartCoroutine("Hit");
+            }
+            else if (health == 5)
             {
                 Destroy(collision.gameObject);
                 health--;
@@ -207,7 +240,14 @@ public class Health : MonoBehaviour {
         #region Octagon
         if (collision.gameObject.tag == "Octagon")
         {
-            if (health == 5)
+            if (health == 6)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                HitDamage();
+                StartCoroutine("Hit");
+            }
+            else if (health == 5)
             {
                 Destroy(collision.gameObject);
                 health--;
@@ -248,7 +288,14 @@ public class Health : MonoBehaviour {
         #region Dodecagon
         if (collision.gameObject.tag == "Dodecagon")
         {
-            if (health == 5)
+            if (health == 6)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                HitDamage();
+                StartCoroutine("Hit");
+            }
+            else if (health == 5)
             {
                 Destroy(collision.gameObject);
                 health--;
@@ -285,8 +332,149 @@ public class Health : MonoBehaviour {
             }
         }
         #endregion Dodecagon
+
+        #region Double
+        if (collision.gameObject.tag == "Double")
+        {
+            if (health == 6)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                HitDamage();
+                StartCoroutine("Hit");
+            }
+            else if (health == 5)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                HitDamage();
+                StartCoroutine("Hit");
+            }
+            else if (health == 4)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                HitDamage();
+                StartCoroutine("Hit");
+            }
+            else if (health == 3)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                HitDamage();
+                StartCoroutine("Hit");
+            }
+            else if (health == 2)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                HitDamage();
+                StartCoroutine("Hit");
+            }
+            else if (health == 1)
+            {
+                Destroy(collision.gameObject);
+                health--;
+                StartCoroutine("Hit");
+            }
         }
-    }
+			#endregion Double
+
+		#region Shot
+		if (collision.gameObject.tag == "Shot")
+		{
+			if (health == 6)
+			{
+				Destroy(collision.gameObject);
+				health--;
+				HitDamage();
+				StartCoroutine("Hit");
+			}
+			else if (health == 5)
+			{
+				Destroy(collision.gameObject);
+				health--;
+				HitDamage();
+				StartCoroutine("Hit");
+			}
+			else if (health == 4)
+			{
+				Destroy(collision.gameObject);
+				health--;
+				HitDamage();
+				StartCoroutine("Hit");
+			}
+			else if (health == 3)
+			{
+				Destroy(collision.gameObject);
+				health--;
+				HitDamage();
+				StartCoroutine("Hit");
+			}
+			else if (health == 2)
+			{
+				Destroy(collision.gameObject);
+				health--;
+				HitDamage();
+				StartCoroutine("Hit");
+			}
+			else if (health == 1)
+			{
+				Destroy(collision.gameObject);
+				health--;
+				StartCoroutine("Hit");
+			}
+		}
+			#endregion Shot
+
+		#region ShotBullet
+			if (collision.gameObject.tag == "ShotBullet")
+			{
+				if (health == 6)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					HitDamage();
+					StartCoroutine("Hit");
+				}
+				else if (health == 5)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					HitDamage();
+					StartCoroutine("Hit");
+				}
+				else if (health == 4)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					HitDamage();
+					StartCoroutine("Hit");
+				}
+				else if (health == 3)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					HitDamage();
+					StartCoroutine("Hit");
+				}
+				else if (health == 2)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					HitDamage();
+					StartCoroutine("Hit");
+				}
+				else if (health == 1)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					StartCoroutine("Hit");
+				}
+			}
+			#endregion ShotBullet
+		}
+	}
 
     public virtual void Die()
     {
@@ -297,6 +485,10 @@ public class Health : MonoBehaviour {
 
     public virtual void HitDamage()
     {
+        if (health == 5)
+        {
+            heart6.SetActive(false);
+        }
         if (health == 4)
         {
             heart5.SetActive(false);

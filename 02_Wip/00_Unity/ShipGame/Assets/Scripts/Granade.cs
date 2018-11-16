@@ -21,31 +21,41 @@ public class Granade : MonoBehaviour {
 
 	private void OnCollisionStay2D(Collision2D other) {
 		if(Started){		
-		if (other.gameObject.tag == "Square")
-        {
-            EnemySpawner.MaxEnemies--;
-            Destroy(other.gameObject);
-        }
-		if (other.gameObject.tag == "Pentagon")
-        {
-            Destroy(other.gameObject);
-            EnemySpawner.MaxEnemies--;
-        }
-		if (other.gameObject.tag == "Hexagon")
-        {
-            EnemySpawner.MaxEnemies--;
-            Destroy(other.gameObject);
-        }
-		if (other.gameObject.tag == "Octagon")
-        {
-            Destroy(other.gameObject);
-            EnemySpawner.MaxEnemies--;
-        }
-		if (other.gameObject.tag == "Dodecagon")
-        {
-            EnemySpawner.MaxEnemies--;
-            Destroy(other.gameObject);
-        }
+			if (other.gameObject.tag == "Square")
+        	{
+        	    EnemySpawner.MaxEnemies--;
+        	    Destroy(other.gameObject);
+        	}
+			if (other.gameObject.tag == "Pentagon")
+        	{
+            	Destroy(other.gameObject);
+            	EnemySpawner.MaxEnemies--;
+        	}
+			if (other.gameObject.tag == "Hexagon")
+        	{
+        	    EnemySpawner.MaxEnemies--;
+        	    Destroy(other.gameObject);
+        	}
+			if (other.gameObject.tag == "Octagon")
+        	{
+        	    Destroy(other.gameObject);
+        	    EnemySpawner.MaxEnemies--;
+        	}
+			if (other.gameObject.tag == "Dodecagon")
+        	{
+        	    EnemySpawner.MaxEnemies--;
+        	    Destroy(other.gameObject);
+        	}
+			if (other.gameObject.tag == "Double")
+        	{
+            	EnemySpawner.MaxEnemies--;
+            	Destroy(other.gameObject);
+        	}
+			if (other.gameObject.tag == "Shot")
+        	{
+           		EnemySpawner.MaxEnemies--;
+         		Destroy(other.gameObject);
+        	}
 		}
 	}
 	public IEnumerator Explosion(){		

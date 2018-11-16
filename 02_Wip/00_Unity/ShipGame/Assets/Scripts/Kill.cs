@@ -14,6 +14,10 @@ public class Kill : MonoBehaviour {
     private int LifeOctagon = 2;
     public bool EnemyDodecagon = false;
     private int LifeDodecagon = 3;
+    public bool EnemyDouble = false;
+    private int LifeDouble = 4;
+    public bool EnemyShot = false;
+    private int LifeShot = 3;
 
     public int Damage = 1;
     public GameObject Icon1;
@@ -21,6 +25,9 @@ public class Kill : MonoBehaviour {
     
     Vector2 mousePos = Vector2.zero;
     public int level;
+
+    public GameObject Square1;
+    public GameObject Father;
 
     // Use this for initialization
     void Start () {
@@ -34,9 +41,9 @@ public class Kill : MonoBehaviour {
             Damage = PlayerPrefs.GetInt("PlayerDamage");
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
+    
+    // Update is called once per frame
+    void Update () {
         //Mouse Position for spawn
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = mousePos;
@@ -77,6 +84,20 @@ public class Kill : MonoBehaviour {
             Destroy(this.gameObject);
         }
         if (LifeDodecagon <= 0)
+        {
+            SkillsCount.Killeds++;
+            EnemySpawner.MaxEnemies--;
+            Destroy(this.gameObject);
+        }
+        if (LifeDouble <= 0)
+        {
+			GameObject clone1 = Instantiate(Square1, Father.transform.position, Quaternion.identity) as GameObject;
+			clone1.SetActive(true);
+			SkillsCount.Killeds++;
+            EnemySpawner.MaxEnemies--;
+            Destroy(Father);
+        }
+        if (LifeShot <= 0)
         {
             SkillsCount.Killeds++;
             EnemySpawner.MaxEnemies--;
@@ -125,6 +146,22 @@ public class Kill : MonoBehaviour {
             if (collision.gameObject.tag == "Bullet")
             {
                 LifeDodecagon -= Damage;
+                Destroy(collision.gameObject);
+            }
+        }
+        if (EnemyDouble)
+        {
+            if (collision.gameObject.tag == "Bullet")
+            {
+                LifeDouble -= Damage;
+                Destroy(collision.gameObject);
+            }
+        }
+        if (EnemyShot)
+        {
+            if (collision.gameObject.tag == "Bullet")
+            {
+                LifeShot -= Damage;
                 Destroy(collision.gameObject);
             }
         }
