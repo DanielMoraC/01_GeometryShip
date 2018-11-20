@@ -61,10 +61,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Actives.cs" />
     <Compile Include="Assets\Scripts\Blast.cs" />
+    <Compile Include="Assets\Scripts\BossBullet.cs" />
+    <Compile Include="Assets\Scripts\BossMovement.cs" />
+    <Compile Include="Assets\Scripts\BossShot.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\CursorImage.cs" />
     <Compile Include="Assets\Scripts\DefineVariables.cs" />
+    <Compile Include="Assets\Scripts\Die.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\EnemyShot.cs" />
     <Compile Include="Assets\Scripts\EnemySkills.cs" />

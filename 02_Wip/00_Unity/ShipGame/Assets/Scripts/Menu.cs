@@ -73,8 +73,13 @@ public class Menu : MonoBehaviour {
             SceneManager.LoadScene("Map4");
             //Time.timeScale = 0;
         }
+		if (map == 4 && Next == 1)
+		{
+			SceneManager.LoadScene("Boss");
+			//Time.timeScale = 0;
+		}
 
-    }
+	}
 
     public void Play()
     {

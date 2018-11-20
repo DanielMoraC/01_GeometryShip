@@ -15,6 +15,10 @@ TagManager:
   - Double
   - Shot
   - ShotBullet
+  - Boss
+  - WallLeft
+  - WallRight
+  - BossBullet
   layers:
   - Default
   - TransparentFX

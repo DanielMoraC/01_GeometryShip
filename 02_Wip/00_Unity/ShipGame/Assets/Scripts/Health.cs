@@ -478,7 +478,7 @@ public class Health : MonoBehaviour {
 
     public virtual void Die()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Defeat");
     }
 
     //deactivate the hearts when the player get damages

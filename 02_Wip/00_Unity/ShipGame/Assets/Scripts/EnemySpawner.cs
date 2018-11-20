@@ -107,9 +107,10 @@ public class EnemySpawner : MonoBehaviour {
                 PlayerPrefs.SetInt("CurrentMap", 4);
 				Destroy(GameObject.FindWithTag("Double"));
 				Destroy(GameObject.FindWithTag("Square"));
-                Destroy(GameObject.FindWithTag("Shot"));        
-                //SceneManager.LoadScene("LevelUp");
-                SceneManager.LoadScene("Win");                
+                Destroy(GameObject.FindWithTag("Shot"));
+				//SceneManager.LoadScene("LevelUp");
+				//SceneManager.LoadScene("Win");
+				SceneManager.LoadScene("ToBoss");
             }
         }
     }
