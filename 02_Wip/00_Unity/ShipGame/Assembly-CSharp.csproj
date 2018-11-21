@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Actives.cs" />
     <Compile Include="Assets\Scripts\Blast.cs" />
     <Compile Include="Assets\Scripts\BossBullet.cs" />
+    <Compile Include="Assets\Scripts\BossHP.cs" />
     <Compile Include="Assets\Scripts\BossMovement.cs" />
     <Compile Include="Assets\Scripts\BossShot.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />

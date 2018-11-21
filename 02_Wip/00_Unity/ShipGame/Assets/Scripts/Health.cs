@@ -17,9 +17,9 @@ public class Health : MonoBehaviour {
     public GameObject heart01;
     public GameObject heart02;
 
-    static public bool Damaged = true;
+	static public bool Damaged = true;
 
-    public int Lifes = 0;
+	public int Lifes = 0;
 
     Renderer rend;
 
@@ -473,6 +473,53 @@ public class Health : MonoBehaviour {
 				}
 			}
 			#endregion ShotBullet
+
+		#region BossBullet
+			if (collision.gameObject.tag == "BossBullet")
+			{
+				if (health == 6)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					HitDamage();
+					StartCoroutine("Hit");
+				}
+				else if (health == 5)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					HitDamage();
+					StartCoroutine("Hit");
+				}
+				else if (health == 4)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					HitDamage();
+					StartCoroutine("Hit");
+				}
+				else if (health == 3)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					HitDamage();
+					StartCoroutine("Hit");
+				}
+				else if (health == 2)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					HitDamage();
+					StartCoroutine("Hit");
+				}
+				else if (health == 1)
+				{
+					Destroy(collision.gameObject);
+					health--;
+					StartCoroutine("Hit");
+				}
+			}
+		#endregion BossBullet
 		}
 	}
 

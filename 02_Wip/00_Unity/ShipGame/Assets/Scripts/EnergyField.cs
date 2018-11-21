@@ -53,6 +53,10 @@ public class EnergyField : MonoBehaviour {
             EnemySpawner.MaxEnemies--;
             Destroy(collision.gameObject);
         }
+		if (collision.gameObject.tag == "BossBullet")
+		{
+			Destroy(collision.gameObject);
+		}
 
-    }
+	}
 }

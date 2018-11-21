@@ -56,6 +56,10 @@ public class Granade : MonoBehaviour {
            		EnemySpawner.MaxEnemies--;
          		Destroy(other.gameObject);
         	}
+			if (other.gameObject.tag == "BossBullet")
+			{
+				Destroy(other.gameObject);
+			}
 		}
 	}
 	public IEnumerator Explosion(){		
