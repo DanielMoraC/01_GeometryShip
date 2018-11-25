@@ -59,7 +59,7 @@ public class Actives : MonoBehaviour {
 		//print("HOLA");
 		gameObject.transform.position = LauncherGranade.transform.position;		
 		SkillIcon1.SetActive(true);
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(0.2f);
 		Skill1.SetActive(true);
 	}
     public IEnumerator EnergyField()
