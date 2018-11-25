@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Projects\\01_GeometryShip\\02_Wip\\00_Unity\\ShipGame\\Assembly-CSharp.csproj",
+  "TargetFramework": "v3.5",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
