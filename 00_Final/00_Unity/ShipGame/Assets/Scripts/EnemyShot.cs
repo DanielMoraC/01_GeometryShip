@@ -23,15 +23,16 @@ public class EnemyShot : MonoBehaviour {
 
 	}
 
+	//Detect if the player is in range of the enemie for it to shot
 	public void OnTriggerStay2D(Collider2D collision)
 	{		
 		if (collision.gameObject.tag == "Player" && disparando == 1)
 		{
-			//print("Hola");
 			StartCoroutine("Shooting");
 		}
 	}
 
+	//Detect id the player exit the range of the enemie
 	public void OnTriggerExit2D(Collider2D collision)
 	{		
 		if (collision.gameObject.tag == "Player")
@@ -41,15 +42,13 @@ public class EnemyShot : MonoBehaviour {
 		}
 	}
 	
+	//Make the enemie shot
 	public IEnumerator Shooting()
 	{
-
 		disparando = 0;
 		GameObject clone = Instantiate(weapon, gunEnd.position, gunEnd.rotation);
 		clone.SetActive(true);
 		yield return new WaitForSeconds(seconds);
 		disparando = 1;
-
-
 	}
 }

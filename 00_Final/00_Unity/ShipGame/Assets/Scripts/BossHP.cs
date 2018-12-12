@@ -22,6 +22,7 @@ public class BossHP : MonoBehaviour {
 		UpdateHealthbar();
 	}
 
+	//Take damage if the bullet hits the boss
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.tag == "Bullet")
@@ -36,12 +37,12 @@ public class BossHP : MonoBehaviour {
 		if (hitpoint <= 0)
 		{
 			hitpoint = 0;
-			//Debug.Log("Death");
 			SceneManager.LoadScene("Win");
 		}
 		UpdateHealthbar();
 	}
 
+	//Make the life bar become small if it takes damage
 	private void UpdateHealthbar()
 	{
 		float ratio = hitpoint / maxhitpoint;

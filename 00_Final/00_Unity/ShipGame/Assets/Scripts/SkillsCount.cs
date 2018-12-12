@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SkillsCount : MonoBehaviour {
 
+	//To have a count on the kills for the actives that enemies drop
 	static public int Killeds = 0;	
 	static public int SkillsSpawned = 0;
 

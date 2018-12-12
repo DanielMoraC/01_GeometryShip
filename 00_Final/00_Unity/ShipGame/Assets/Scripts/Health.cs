@@ -59,7 +59,9 @@ public class Health : MonoBehaviour {
             health = 8;
         }
 
-        if (health == 4)
+		//show the hearts that must be according to health
+
+		if (health == 4)
         {
             heart4.SetActive(true);
             heart0.SetActive(true);
@@ -553,7 +555,7 @@ public class Health : MonoBehaviour {
         }
     }
 
-    //When you get hit the player sprite is red
+    //When you get hit the player sprite turn red for a half a second
 
     IEnumerator Hit()
     {

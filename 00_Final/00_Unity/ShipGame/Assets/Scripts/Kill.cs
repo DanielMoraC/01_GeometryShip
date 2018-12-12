@@ -63,7 +63,7 @@ public class Kill : MonoBehaviour {
             clone.SetActive(true);
         }
 
-        //When enemies die
+        //When enemies die the text that change how many enemies are left and destroy the enemie
 
         if (LifeSquare <= 0)
         {
@@ -112,7 +112,6 @@ public class Kill : MonoBehaviour {
     }
 
     //When the bullet hit an enemy it lose health and destroy the bullet
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (EnemySquare)

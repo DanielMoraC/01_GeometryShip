@@ -15,9 +15,11 @@ public class Bullet : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //Speed of the bullet
+
+        //Speed of the bullets
         float vX = 4f * Time.deltaTime;
-        //Direction and Spawn of the bullet
+
+        //Direction and Spawn of the bullets
         if(bullet1){
         transform.Translate(Launcher1.transform.up * vX);
         direction = Launcher1.transform.up;
@@ -34,6 +36,7 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         //Speed and direction of the bullet
         float vX = 4f * Time.deltaTime;
         transform.Translate(direction * vX);

@@ -43,10 +43,10 @@ public class EnemySpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {   
        
+		//Show the enmies left on the game
         EnemiesLeft.text = MaxEnemies.ToString();
 
         //Spawn the enemies
-
         if (map == 0)
         {
             if (MaxEnemies > 0 && Spawning)
@@ -115,17 +115,14 @@ public class EnemySpawner : MonoBehaviour {
         }
     }
 
-    //Set the position for the spawn
+    //Set the position for the spawn and the enemie random
 
     IEnumerator Spawn1()
     {
         Spawning = false;
-
-        //Vector2 spawnPos = transform.position = Random.insideUnitCircle * 2; Opcion 2
-        //Vector2 spawnPos = new Vector2 (Random.Range(-1f, 1f), Random.Range(-1f, 1f)); Opcion3
-        //Vector2 spawnPos = new Vector2(Random.Range(0.5f, 1f), Random.Range(0.5f, 1f)); Opcion4 pero aparece siempre desde el mismo sitio
-        Vector2 spawnPos = PlayerController.Position; //Opcion1
-        spawnPos += Random.insideUnitCircle * 2; //Opcion1
+        
+        Vector2 spawnPos = PlayerController.Position; 
+        spawnPos += Random.insideUnitCircle * 2;
 
         int EnemiesIndex = Random.Range(0, Enemies.Length);
         GameObject clone = Instantiate(Enemies[EnemiesIndex], spawnPos, Quaternion.identity);        
@@ -134,15 +131,13 @@ public class EnemySpawner : MonoBehaviour {
         Spawning = true;
     }
 
-    IEnumerator Spawn2()
+	//Set the position for the spawn and the enemie random
+	IEnumerator Spawn2()
     {
         Spawning = false;
-
-        //Vector2 spawnPos = transform.position = Random.insideUnitCircle * 2; Opcion 2
-        //Vector2 spawnPos = new Vector2 (Random.Range(-1f, 1f), Random.Range(-1f, 1f)); Opcion3
-        //Vector2 spawnPos = new Vector2(Random.Range(0.5f, 1f), Random.Range(0.5f, 1f)); Opcion4 pero aparece siempre desde el mismo sitio
-        Vector2 spawnPos = PlayerController.Position; //Opcion1
-        spawnPos += Random.insideUnitCircle * 2; //Opcion1
+       
+        Vector2 spawnPos = PlayerController.Position; 
+        spawnPos += Random.insideUnitCircle * 2; 
 
         int EnemiesIndex = Random.Range(0, Enemies.Length);
         GameObject clone = Instantiate(Enemies[EnemiesIndex], spawnPos, Quaternion.identity);
@@ -151,15 +146,13 @@ public class EnemySpawner : MonoBehaviour {
         Spawning = true;
     }
 
-    IEnumerator Spawn3()
+	//Set the position for the spawn and the enemie random
+	IEnumerator Spawn3()
     {
         Spawning = false;
 
-        //Vector2 spawnPos = transform.position = Random.insideUnitCircle * 2; Opcion 2
-        //Vector2 spawnPos = new Vector2 (Random.Range(-1f, 1f), Random.Range(-1f, 1f)); Opcion3
-        //Vector2 spawnPos = new Vector2(Random.Range(0.5f, 1f), Random.Range(0.5f, 1f)); Opcion4 pero aparece siempre desde el mismo sitio
-        Vector2 spawnPos = PlayerController.Position; //Opcion1
-        spawnPos += Random.insideUnitCircle * 2; //Opcion1
+        Vector2 spawnPos = PlayerController.Position;
+        spawnPos += Random.insideUnitCircle * 2;
 
         int EnemiesIndex = Random.Range(0, Enemies.Length);
         GameObject clone = Instantiate(Enemies[EnemiesIndex], spawnPos, Quaternion.identity);

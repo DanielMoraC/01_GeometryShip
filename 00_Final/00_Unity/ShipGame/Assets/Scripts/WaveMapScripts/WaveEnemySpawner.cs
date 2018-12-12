@@ -22,8 +22,6 @@ public class WaveEnemySpawner : MonoBehaviour {
 
 	static public int Damage;
 
-	public int Test;
-
 	// Use this for initialization
 	void Start () {
 		Wave = 0;
@@ -33,7 +31,8 @@ public class WaveEnemySpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Test = Damage;
+		
+		//Show the wave the player is in
 		WaveNumber.text = Wave.ToString();
 
 		//Set Damage
@@ -134,7 +133,7 @@ public class WaveEnemySpawner : MonoBehaviour {
 		}
 	}
 
-	//Effect of wave killed
+	//Effect of wave passed
 
 	IEnumerator WaveKilled()
 	{
@@ -143,17 +142,13 @@ public class WaveEnemySpawner : MonoBehaviour {
 		FinalEffect.SetActive(false);
 	}
 
-	//Set the position for the spawn
-
+	//Set the position for the spawn and the enemie random
 	IEnumerator Spawn1()
 	{
 		Spawning = false;
 
-		//Vector2 spawnPos = transform.position = Random.insideUnitCircle * 2; Opcion 2
-		//Vector2 spawnPos = new Vector2 (Random.Range(-1f, 1f), Random.Range(-1f, 1f)); Opcion3
-		//Vector2 spawnPos = new Vector2(Random.Range(0.5f, 1f), Random.Range(0.5f, 1f)); Opcion4 pero aparece siempre desde el mismo sitio
-		Vector2 spawnPos = PlayerController.Position; //Opcion1
-		spawnPos += Random.insideUnitCircle * 2; //Opcion1
+		Vector2 spawnPos = PlayerController.Position; 
+		spawnPos += Random.insideUnitCircle * 2; 
 
 		int EnemiesIndex = Random.Range(0, Enemies1.Length);
 		GameObject clone = Instantiate(Enemies1[EnemiesIndex], spawnPos, Quaternion.identity);
@@ -162,15 +157,13 @@ public class WaveEnemySpawner : MonoBehaviour {
 		Spawning = true;
 	}
 
+	//Set the position for the spawn and the enemie random
 	IEnumerator Spawn2()
 	{
 		Spawning = false;
 
-		//Vector2 spawnPos = transform.position = Random.insideUnitCircle * 2; Opcion 2
-		//Vector2 spawnPos = new Vector2 (Random.Range(-1f, 1f), Random.Range(-1f, 1f)); Opcion3
-		//Vector2 spawnPos = new Vector2(Random.Range(0.5f, 1f), Random.Range(0.5f, 1f)); Opcion4 pero aparece siempre desde el mismo sitio
-		Vector2 spawnPos = PlayerController.Position; //Opcion1
-		spawnPos += Random.insideUnitCircle * 2; //Opcion1
+		Vector2 spawnPos = PlayerController.Position; 
+		spawnPos += Random.insideUnitCircle * 2; 
 
 		int EnemiesIndex = Random.Range(0, Enemies2.Length);
 		GameObject clone = Instantiate(Enemies2[EnemiesIndex], spawnPos, Quaternion.identity);
@@ -179,15 +172,13 @@ public class WaveEnemySpawner : MonoBehaviour {
 		Spawning = true;
 	}
 
+	//Set the position for the spawn and the enemie random
 	IEnumerator Spawn3()
 	{
 		Spawning = false;
 
-		//Vector2 spawnPos = transform.position = Random.insideUnitCircle * 2; Opcion 2
-		//Vector2 spawnPos = new Vector2 (Random.Range(-1f, 1f), Random.Range(-1f, 1f)); Opcion3
-		//Vector2 spawnPos = new Vector2(Random.Range(0.5f, 1f), Random.Range(0.5f, 1f)); Opcion4 pero aparece siempre desde el mismo sitio
-		Vector2 spawnPos = PlayerController.Position; //Opcion1
-		spawnPos += Random.insideUnitCircle * 2; //Opcion1
+		Vector2 spawnPos = PlayerController.Position;
+		spawnPos += Random.insideUnitCircle * 2;
 
 		int EnemiesIndex = Random.Range(0, Enemies3.Length);
 		GameObject clone = Instantiate(Enemies3[EnemiesIndex], spawnPos, Quaternion.identity);
@@ -196,15 +187,13 @@ public class WaveEnemySpawner : MonoBehaviour {
 		Spawning = true;
 	}
 
+	//Set the position for the spawn and the enemie random
 	IEnumerator Spawn4()
 	{
 		Spawning = false;
 
-		//Vector2 spawnPos = transform.position = Random.insideUnitCircle * 2; Opcion 2
-		//Vector2 spawnPos = new Vector2 (Random.Range(-1f, 1f), Random.Range(-1f, 1f)); Opcion3
-		//Vector2 spawnPos = new Vector2(Random.Range(0.5f, 1f), Random.Range(0.5f, 1f)); Opcion4 pero aparece siempre desde el mismo sitio
-		Vector2 spawnPos = PlayerController.Position; //Opcion1
-		spawnPos += Random.insideUnitCircle * 2; //Opcion1
+		Vector2 spawnPos = PlayerController.Position;
+		spawnPos += Random.insideUnitCircle * 2;
 
 		int EnemiesIndex = Random.Range(0, Enemies4.Length);
 		GameObject clone = Instantiate(Enemies4[EnemiesIndex], spawnPos, Quaternion.identity);

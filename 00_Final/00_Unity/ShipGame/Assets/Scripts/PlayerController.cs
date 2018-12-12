@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+		//Change the speed if its changed leveling up
         level = PlayerPrefs.GetInt("Leveled1");
 
         if (level == 1)
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {        
+		//Movement and make the player look to the mouse
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 

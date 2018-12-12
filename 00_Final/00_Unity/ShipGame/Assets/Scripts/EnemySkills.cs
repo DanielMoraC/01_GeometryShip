@@ -7,7 +7,6 @@ public class EnemySkills : MonoBehaviour {
 	public bool Skill1;
 	public bool Skill2;
 	public GameObject PlayerIcon1;
-	//public GameObject PlayerIcon2;
 	public GameObject IconSprite1;
 	public GameObject IconSprite2;	
 
@@ -41,6 +40,7 @@ public class EnemySkills : MonoBehaviour {
         }
 	}
 
+	//not take damage
 	public IEnumerator NoDamage(){
 		PlayerIcon1.SetActive(true);
 		Health.Damaged = false;
@@ -49,11 +49,11 @@ public class EnemySkills : MonoBehaviour {
 		PlayerIcon1.SetActive(false);
 		Destroy(this.gameObject);
 	}
+
+	//Shot two bullets
 	public IEnumerator Double(){
-		//PlayerIcon2.SetActive(true);
 		Weapon.DoubleShoot = true;
 		yield return new WaitForSeconds(0.2f);
-		//PlayerIcon2.SetActive(false);
 		Destroy(this.gameObject);
 	}
 }

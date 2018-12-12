@@ -55,27 +55,29 @@ public class Actives : MonoBehaviour {
             Skill = 0;
         }
 	}
+
+	//Launch the grande
 	public IEnumerator Granade(){
-		//print("HOLA");
 		gameObject.transform.position = LauncherGranade.transform.position;		
 		SkillIcon1.SetActive(true);
 		yield return new WaitForSeconds(2f);
 		Skill1.SetActive(true);
 	}
+
+	//Active the energy field
     public IEnumerator EnergyField()
     {
-        //print("HOLA");
         gameObject.transform.position = Player.transform.position;        
         SkillIcon2.SetActive(true);        
         Skill2.SetActive(true);
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
     }
+
+	//Active the blast
     public IEnumerator Blast()
     {
-        //print("HOLA");
         Skill3.transform.position = LauncherBlast.transform.position;
-        //SkillIcon2.SetActive(true);
         Skill3.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         Destroy(this.gameObject);

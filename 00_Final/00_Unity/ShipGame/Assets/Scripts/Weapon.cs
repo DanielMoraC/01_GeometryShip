@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        //Disprar solo una bala
+        //Shot one bullet
 
         if(!DoubleShoot){
             if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -30,9 +30,9 @@ public class Weapon : MonoBehaviour {
             }
         }
 
-        //Disparar dos balas
+		//Shot two bullet
 
-        if(DoubleShoot){
+		if (DoubleShoot){
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GameObject clone2 = Instantiate(bulletPrefab2, Launcher2.transform.position, Quaternion.identity) as GameObject;

@@ -19,8 +19,6 @@ public class WaveKill : MonoBehaviour {
 	public bool EnemyShot = false;
 	private int LifeShot = 3;
 
-	//public int Damage = 0;
-
 	public GameObject Square1;
 	public GameObject Father;
 
@@ -33,23 +31,8 @@ public class WaveKill : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		//Set damage
-		/*
-		if (WaveEnemySpawner.Wave == 0)
-		{
-			Damage = 1;
-		}
-		if (WaveEnemySpawner.Wave == 2)
-		{
-			Damage = 2;
-		}
-		if (WaveEnemySpawner.Wave >= 3)
-		{
-			Damage = 3;
-		}*/
 
-		//When enemies die
-
+		//When enemies die the text that change how many enemies are left and destroy the enemie
 		if (LifeSquare <= 0)
 		{
 			WaveEnemySpawner.EnemiesNumber -= 1;
@@ -90,7 +73,6 @@ public class WaveKill : MonoBehaviour {
 	}
 
 	//When the bullet hit an enemy it lose health and destroy the bullet
-
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (EnemySquare)

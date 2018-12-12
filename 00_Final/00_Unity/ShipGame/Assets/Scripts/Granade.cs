@@ -19,8 +19,10 @@ public class Granade : MonoBehaviour {
 		
 	}
 
+	//Kill the enemies when the granade explodes
 	private void OnCollisionStay2D(Collision2D other) {
-		if(Started){		
+
+		if (Started){		
 			if (other.gameObject.tag == "Square")
         	{
         	    EnemySpawner.MaxEnemies--;
@@ -62,6 +64,8 @@ public class Granade : MonoBehaviour {
 			}
 		}
 	}
+
+	//When it explodes that particles come out and after a while it is destroyed
 	public IEnumerator Explosion(){		
 		Icon.SetActive(false);
 		Particle.SetActive(true);

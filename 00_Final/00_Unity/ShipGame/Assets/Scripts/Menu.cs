@@ -16,8 +16,11 @@ public class Menu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        map = PlayerPrefs.GetInt("CurrentMap");
+		//to know which is the following map
+		map = PlayerPrefs.GetInt("CurrentMap");
     }
+
+	//Menu animations
     public void ToControls(){
         m_Animator.SetBool("Controls", true);
     }
@@ -30,32 +33,39 @@ public class Menu : MonoBehaviour {
     public void BackToMenu2(){
         m_Animator.SetBool("Play", false);
     }
+
+	//Restart the game
     public void Remove()
     {
         PlayerPrefs.DeleteAll();
     }
+
+	//Go to map 1
     public void Map1()
     {
         SceneManager.LoadScene("Map1");
     }
 
+	//Go to menu
     public void ToMenu()
     {
-        //Time.timeScale = 0;
         Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
     }
 
+	//Exit the application 
     public void Exit()
     {
         Application.Quit();
     }
 
+	//Start the wave map
 	public void Waves()
 	{
 		SceneManager.LoadScene("WaveMap");
 	}
 
+	//Start the normal game in wich map you should
     public void NextMap()
     {
         if (map == 0 && Next == 1)
@@ -86,6 +96,7 @@ public class Menu : MonoBehaviour {
 
 	}
 
+	//Play the map
     public void Play()
     {
         if (map == 0)
@@ -110,6 +121,7 @@ public class Menu : MonoBehaviour {
         }
     }
 
+	//If the player win go to menu and delte the progress
     public void Win()
     {
         SceneManager.LoadScene("Menu");

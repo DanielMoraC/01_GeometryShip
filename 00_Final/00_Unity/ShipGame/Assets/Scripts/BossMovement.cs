@@ -12,11 +12,8 @@ public class BossMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//-0.899  0.951 * Time.deltaTime
-		/*if (gameObject.transform.position.x <= 0f && gameObject.transform.position.x >= -0.899f)
-		{
-			transform.Translate(gameObject.transform.right * -vX);
-		}*/
+
+		//Boss movment from left to right and right to left
 		if (DirectionLeft)
 		{
 			transform.Translate(gameObject.transform.right * -vX);
@@ -25,18 +22,8 @@ public class BossMovement : MonoBehaviour {
 			transform.Translate(gameObject.transform.right * vX);
 		}
 	}
-	/*
-	public void OnCollisionEnter2D(Collision2D collision)
-	{
-		if (collision.gameObject.name == "WallLeft")
-		{
-			DirectionLeft = false;
-		}
-		if (collision.gameObject.name == "WallRight")
-		{
-			DirectionLeft = true;
-		}
-	}*/
+	
+	//If the boss collide with a wall it goes to the other side
 	public void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.gameObject.name == "WallLeft")

@@ -8,9 +8,4 @@ public class DefineVariables : MonoBehaviour {
 	void Start () {
         PlayerPrefs.SetInt("PlayerDamage", 1);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

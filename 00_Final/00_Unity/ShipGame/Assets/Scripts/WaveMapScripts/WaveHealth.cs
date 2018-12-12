@@ -21,7 +21,7 @@ public class WaveHealth : MonoBehaviour {
 		rend = GetComponent<Renderer>();
 	}
 
-	//Die
+	//Whene the player's health goes to 0 the player dies
 	void Update()
 	{
 		if (health == 0)
@@ -31,7 +31,6 @@ public class WaveHealth : MonoBehaviour {
 	}
 
 	//Take damage from enemies
-
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 
@@ -271,13 +270,13 @@ public class WaveHealth : MonoBehaviour {
 		
 	}
 
+	//Show the scene when the player dies
 	public virtual void Die()
 	{
 		SceneManager.LoadScene("Defeat");
 	}
 
 	//Deactivate the hearts when the player get damages
-
 	public virtual void HitDamage()
 	{
 		if (health == 2)
@@ -291,7 +290,6 @@ public class WaveHealth : MonoBehaviour {
 	}
 
 	//When you get hit the player sprite is red
-
 	IEnumerator Hit()
 	{
 		rend.material.color = Color.red;

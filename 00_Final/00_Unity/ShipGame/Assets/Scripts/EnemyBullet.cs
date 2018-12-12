@@ -6,18 +6,16 @@ public class EnemyBullet : MonoBehaviour {
 
 	Vector3 direction;
 	Rigidbody rb;
-	public float BulletSpeed;
-	//public GameObject Player;
+	public float BulletSpeed;;
 	public GameObject Launcher;
 
 	// Use this for initialization
 	void Start()
 	{
+		//from where the bullet starts
 		float vX = 4f * Time.deltaTime;
 		transform.Translate(Launcher.transform.up * vX);
 		direction = Launcher.transform.up;
-		/*rb = GetComponent<Rigidbody>();
-		rb.AddRelativeForce(0, 0, BulletSpeed, ForceMode.Impulse);*/
 	}
 
 	void Update()
@@ -27,6 +25,7 @@ public class EnemyBullet : MonoBehaviour {
 		transform.Translate(direction * vX);
 	}
 
+	//Detect if the bullet hit the player or the walls
 	public void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.tag == "Player")

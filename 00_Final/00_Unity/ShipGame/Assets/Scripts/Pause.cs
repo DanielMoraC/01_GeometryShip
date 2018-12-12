@@ -13,9 +13,11 @@ public class Pause : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
+	//Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape) && opened)
+
+		//If you press escape the game is paused and the menu appears or resume
+		if (Input.GetKeyDown(KeyCode.Escape) && opened)
         {           
             opened = false;
             menu.SetActive(false);
@@ -29,6 +31,7 @@ public class Pause : MonoBehaviour {
         }
     }
 
+	//If the player press the pause button
     public void PlayAgain()
     {
         menu.SetActive(false);
@@ -36,11 +39,13 @@ public class Pause : MonoBehaviour {
         PauseGame();
     }
 
+	//Pause the game
     public void PauseGame()
     {
         Time.timeScale = 1;
     }
 
+	//Resume
     public void StartGame()
     {
         Time.timeScale = 0;

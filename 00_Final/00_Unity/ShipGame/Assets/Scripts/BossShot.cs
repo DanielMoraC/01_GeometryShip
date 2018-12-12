@@ -22,6 +22,7 @@ public class BossShot : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+		//The two types of shooting of the boss
 		if (disparando == 1)
 		{
 			StartCoroutine("Shooting1");
@@ -30,31 +31,9 @@ public class BossShot : MonoBehaviour {
 		{
 			StartCoroutine("Shooting2");
 		}
-		/*if (change == 1)
-		{
-			StartCoroutine("Change");
-		}*/
-	}
-	/*
-	public void OnTriggerStay2D(Collider2D collision)
-	{
-		if (collision.gameObject.tag == "Player" && disparando == 1)
-		{
-			//print("Hola");
-			StartCoroutine("Shooting");
-		}
 	}
 
-	public void OnTriggerExit2D(Collider2D collision)
-	{
-		if (collision.gameObject.tag == "Player")
-		{
-			StopCoroutine("Shooting");
-			disparando = 1;
-		}
-	}
-	*/
-	
+	//Boss shooting straight
 	public IEnumerator Shooting1()
 	{
 		disparando = 0;
@@ -63,6 +42,8 @@ public class BossShot : MonoBehaviour {
 		yield return new WaitForSeconds(0.3f);
 		disparando = 2;
 	}
+
+	//boss shooting sideways
 	public IEnumerator Shooting2()
 	{
 		disparando = 0;

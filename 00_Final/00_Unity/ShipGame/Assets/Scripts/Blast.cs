@@ -14,13 +14,13 @@ public class Blast : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //gameObject.transform.SetParent(Player);
-        //gameObject.transform.parent = Player.transform;
+		//Set the position and rotation with player
         gameObject.transform.position = Player.transform.position;
         gameObject.transform.rotation = PlayerRotation.transform.rotation;
 	}
-    
-    private void OnTriggerEnter2D(Collider2D collision)
+
+	//Kill the enemies when they touch the blast
+	private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Square")
         {

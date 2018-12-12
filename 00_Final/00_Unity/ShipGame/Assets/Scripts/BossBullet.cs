@@ -15,6 +15,7 @@ public class BossBullet : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
+		//Bullet speed and spawn
 		if (BulletID == 1){
 			float vX = 1f * Time.deltaTime;
 			transform.Translate(Launcher1.transform.up * -vX);
@@ -52,12 +53,15 @@ public class BossBullet : MonoBehaviour {
 			float vX = 1f * Time.deltaTime;
 			transform.Translate(direction * vX);
 		}
+
+		//Destroy the bullet if it exit the map
 		if (gameObject.transform.position.y <= -3.033f)
 		{
 			Destroy(gameObject);
 		}
 	}
 
+	//If the bullet hits the player the bullet disappear
 	public void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.tag == "Player")

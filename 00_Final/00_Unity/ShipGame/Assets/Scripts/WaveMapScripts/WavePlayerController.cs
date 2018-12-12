@@ -25,6 +25,7 @@ public class WavePlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+		//Movement and make the player look to the mouse
 		movement.x = Input.GetAxisRaw("Horizontal");
 		movement.y = Input.GetAxisRaw("Vertical");
 

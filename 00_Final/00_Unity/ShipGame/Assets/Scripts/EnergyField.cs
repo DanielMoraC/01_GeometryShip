@@ -14,9 +14,13 @@ public class EnergyField : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//Move with the player
         Empty.transform.position = Player.transform.position;
 	}
-    private void OnCollisionEnter2D(Collision2D collision)
+
+	//Kill the enemies when they touch the energy field
+	private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Square")
         {
