@@ -115,7 +115,7 @@ public class EnemySpawner : MonoBehaviour {
         }
     }
 
-    //Set the position for the spawn and the enemie random
+    //Set the position for the spawn and the enemy random
 
     IEnumerator Spawn1()
     {
@@ -131,7 +131,7 @@ public class EnemySpawner : MonoBehaviour {
         Spawning = true;
     }
 
-	//Set the position for the spawn and the enemie random
+	//Set the position for the spawn and the enemy random
 	IEnumerator Spawn2()
     {
         Spawning = false;
@@ -146,7 +146,7 @@ public class EnemySpawner : MonoBehaviour {
         Spawning = true;
     }
 
-	//Set the position for the spawn and the enemie random
+	//Set the position for the spawn and the enemy random
 	IEnumerator Spawn3()
     {
         Spawning = false;
